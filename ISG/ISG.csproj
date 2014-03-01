@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29472430-1BF1-4DBE-8044-CAF591FED444}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISG</RootNamespace>
+    <AssemblyName>ISG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CasesController.cs" />
+    <Compile Include="Controllers\ContatoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstitucionalController.cs" />
+    <Compile Include="Controllers\NoticiasController.cs" />
+    <Compile Include="Controllers\OndeEstamosController.cs" />
+    <Compile Include="Controllers\ProdutosController.cs" />
+    <Compile Include="Controllers\SolucoesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="assets\css\bootstrap-responsive.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\faq.css" />
+    <Content Include="assets\css\flexslider.css" />
+    <Content Include="assets\css\font-awesome-ie7.min.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\gisagri\style.css" />
+    <Content Include="assets\css\parallax_slider\demo.css" />
+    <Content Include="assets\css\parallax_slider\nojs.css" />
+    <Content Include="assets\css\parallax_slider\style.css" />
+    <Content Include="assets\css\prettyPhoto.css" />
+    <Content Include="assets\css\pricing.css" />
+    <Content Include="assets\css\refineslide-theme-dark.css" />
+    <Content Include="assets\css\refineslide.css" />
+    <Content Include="assets\css\slitslider\custom.css" />
+    <Content Include="assets\css\slitslider\demo.css" />
+    <Content Include="assets\css\slitslider\fonts\animals-webfont.svg" />
+    <Content Include="assets\css\slitslider\images\1.jpg" />
+    <Content Include="assets\css\slitslider\images\2.jpg" />
+    <Content Include="assets\css\slitslider\images\3.jpg" />
+    <Content Include="assets\css\slitslider\images\4.jpg" />
+    <Content Include="assets\css\slitslider\images\5.jpg" />
+    <Content Include="assets\css\slitslider\style.css" />
+    <Content Include="assets\css\slitslider\styleNoJS.css" />
+    <Content Include="assets\css\social.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\switcher.css" />
+    <Content Include="assets\ico\favicon2.ico" />
+    <Content Include="assets\img\banner-bg.png" />
+    <Content Include="assets\img\bg_body-noise.png" />
+    <Content Include="assets\img\bg_direction_nav.png" />
+    <Content Include="assets\img\bg_footer.png" />
+    <Content Include="assets\img\blog-title-bg2.png" />
+    <Content Include="assets\img\blured.png" />
+    <Content Include="assets\img\blured2.jpg" />
+    <Content Include="assets\img\blured3.jpg" />
+    <Content Include="assets\img\bs-docs-masthead-pattern.png" />
+    <Content Include="assets\img\desenv.jpg" />
+    <Content Include="assets\img\dot.png" />
+    <Content Include="assets\img\footer_facebook.png" />
+    <Content Include="assets\img\gisagri\carousel\harvest.jpg" />
+    <Content Include="assets\img\gisagri\carousel\harvest2.jpg" />
+    <Content Include="assets\img\gisagri\carousel\sugarcanefield1.jpg" />
+    <Content Include="assets\img\gisagri\carousel\sugarcanefield2.jpg" />
+    <Content Include="assets\img\gisagri\carousel\sugarcanefield4.jpg" />
+    <Content Include="assets\img\gisagri\carousel\sugarcanefield5.jpg" />
+    <Content Include="assets\img\gisagri\favicon.ico" />
+    <Content Include="assets\img\gisagri\gisagrivideo.png" />
+    <Content Include="assets\img\gisagri\logo2med.png" />
+    <Content Include="assets\img\gisagri\office.png" />
+    <Content Include="assets\img\gisagri\pixel.png" />
+    <Content Include="assets\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\img\glyphicons-halflings.png" />
+    <Content Include="assets\img\grid-baseline-20px.png" />
+    <Content Include="assets\img\header-price.png" />
+    <Content Include="assets\img\header-shine.png" />
+    <Content Include="assets\img\loading_page.gif" />
+    <Content Include="assets\img\Logo.png" />
+    <Content Include="assets\img\mensageria.jpg" />
+    <Content Include="assets\img\pixel.png" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="assets\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="assets\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="assets\img\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="assets\img\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="assets\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="assets\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="assets\img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="assets\img\prettyPhoto\default\loader.gif" />
+    <Content Include="assets\img\prettyPhoto\default\sprite.png" />
+    <Content Include="assets\img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="assets\img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="assets\img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="assets\img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="assets\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="assets\img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="assets\img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="assets\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="assets\img\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="assets\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="assets\img\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="assets\img\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="assets\img\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="assets\img\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="assets\img\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="assets\img\prettyPhoto\light_square\loader.gif" />
+    <Content Include="assets\img\prettyPhoto\light_square\sprite.png" />
+    <Content Include="assets\img\sga.jpg" />
+    <Content Include="assets\img\siget.jpg" />
+    <Content Include="assets\img\sob_medida.jpg" />
+    <Content Include="assets\img\social_icons\footer\badoo.png" />
+    <Content Include="assets\img\social_icons\footer\bebo.png" />
+    <Content Include="assets\img\social_icons\footer\blogger.png" />
+    <Content Include="assets\img\social_icons\footer\delicious.png" />
+    <Content Include="assets\img\social_icons\footer\deviantart.png" />
+    <Content Include="assets\img\social_icons\footer\digg.png" />
+    <Content Include="assets\img\social_icons\footer\dribble.png" />
+    <Content Include="assets\img\social_icons\footer\email.png" />
+    <Content Include="assets\img\social_icons\footer\facebook.png" />
+    <Content Include="assets\img\social_icons\footer\flickr.png" />
+    <Content Include="assets\img\social_icons\footer\friendfeed.png" />
+    <Content Include="assets\img\social_icons\footer\googleplus.png" />
+    <Content Include="assets\img\social_icons\footer\home.png" />
+    <Content Include="assets\img\social_icons\footer\lastfm.png" />
+    <Content Include="assets\img\social_icons\footer\linkedin.png" />
+    <Content Include="assets\img\social_icons\footer\livejournal.png" />
+    <Content Include="assets\img\social_icons\footer\myspace.png" />
+    <Content Include="assets\img\social_icons\footer\newsvine.png" />
+    <Content Include="assets\img\social_icons\footer\phone.png" />
+    <Content Include="assets\img\social_icons\footer\picassa.png" />
+    <Content Include="assets\img\social_icons\footer\pinterest.png" />
+    <Content Include="assets\img\social_icons\footer\reddit.png" />
+    <Content Include="assets\img\social_icons\footer\rss.png" />
+    <Content Include="assets\img\social_icons\footer\skype.png" />
+    <Content Include="assets\img\social_icons\footer\stumbleupon.png" />
+    <Content Include="assets\img\social_icons\footer\technorati.png" />
+    <Content Include="assets\img\social_icons\footer\tumblr.png" />
+    <Content Include="assets\img\social_icons\footer\twitter1.png" />
+    <Content Include="assets\img\social_icons\footer\twitter2.png" />
+    <Content Include="assets\img\social_icons\footer\vimeo.png" />
+    <Content Include="assets\img\social_icons\footer\wordpress.png" />
+    <Content Include="assets\img\social_icons\footer\yahoo1.png" />
+    <Content Include="assets\img\social_icons\footer\yahoo2.png" />
+    <Content Include="assets\img\social_icons\footer\yelp.png" />
+    <Content Include="assets\img\social_icons\footer\youtube.png" />
+    <Content Include="assets\img\social_icons\main_content\badoo.png" />
+    <Content Include="assets\img\social_icons\main_content\bebo.png" />
+    <Content Include="assets\img\social_icons\main_content\blogger.png" />
+    <Content Include="assets\img\social_icons\main_content\delicious.png" />
+    <Content Include="assets\img\social_icons\main_content\deviantart.png" />
+    <Content Include="assets\img\social_icons\main_content\digg.png" />
+    <Content Include="assets\img\social_icons\main_content\dribble.png" />
+    <Content Include="assets\img\social_icons\main_content\email.png" />
+    <Content Include="assets\img\social_icons\main_content\facebook.png" />
+    <Content Include="assets\img\social_icons\main_content\flickr.png" />
+    <Content Include="assets\img\social_icons\main_content\friendfeed.png" />
+    <Content Include="assets\img\social_icons\main_content\googleplus.png" />
+    <Content Include="assets\img\social_icons\main_content\home.png" />
+    <Content Include="assets\img\social_icons\main_content\lastfm.png" />
+    <Content Include="assets\img\social_icons\main_content\linkedin.png" />
+    <Content Include="assets\img\social_icons\main_content\livejournal.png" />
+    <Content Include="assets\img\social_icons\main_content\myspace.png" />
+    <Content Include="assets\img\social_icons\main_content\newsvine.png" />
+    <Content Include="assets\img\social_icons\main_content\phone.png" />
+    <Content Include="assets\img\social_icons\main_content\picassa.png" />
+    <Content Include="assets\img\social_icons\main_content\pinterest.png" />
+    <Content Include="assets\img\social_icons\main_content\reddit.png" />
+    <Content Include="assets\img\social_icons\main_content\rss.png" />
+    <Content Include="assets\img\social_icons\main_content\skype.png" />
+    <Content Include="assets\img\social_icons\main_content\stumbleupon.png" />
+    <Content Include="assets\img\social_icons\main_content\technorati.png" />
+    <Content Include="assets\img\social_icons\main_content\tumblr.png" />
+    <Content Include="assets\img\social_icons\main_content\twitter1.png" />
+    <Content Include="assets\img\social_icons\main_content\twitter2.png" />
+    <Content Include="assets\img\social_icons\main_content\vimeo.png" />
+    <Content Include="assets\img\social_icons\main_content\wordpress.png" />
+    <Content Include="assets\img\social_icons\main_content\yahoo1.png" />
+    <Content Include="assets\img\social_icons\main_content\yahoo2.png" />
+    <Content Include="assets\img\social_icons\main_content\yelp.png" />
+    <Content Include="assets\img\social_icons\main_content\youtube.png" />
+    <Content Include="assets\img\totop.png" />
+    <Content Include="assets\img\transparent.png" />
+    <Content Include="assets\js\application.js" />
+    <Content Include="assets\js\bootstrap-affix.js" />
+    <Content Include="assets\js\bootstrap-alert.js" />
+    <Content Include="assets\js\bootstrap-button.js" />
+    <Content Include="assets\js\bootstrap-carousel.js" />
+    <Content Include="assets\js\bootstrap-collapse.js" />
+    <Content Include="assets\js\bootstrap-dropdown.js" />
+    <Content Include="assets\js\bootstrap-modal.js" />
+    <Content Include="assets\js\bootstrap-popover.js" />
+    <Content Include="assets\js\bootstrap-scrollspy.js" />
+    <Content Include="assets\js\bootstrap-tab.js" />
+    <Content Include="assets\js\bootstrap-tooltip.js" />
+    <Content Include="assets\js\bootstrap-transition.js" />
+    <Content Include="assets\js\bootstrap-typeahead.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\bootstrap3.js" />
+    <Content Include="assets\js\contact.js" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\custom_refine_slider.js" />
+    <Content Include="assets\js\gisagri\main.js" />
+    <Content Include="assets\js\google-code-prettify\prettify.css" />
+    <Content Include="assets\js\google-code-prettify\prettify.js" />
+    <Content Include="assets\js\ios-orientation-change-fix.js" />
+    <Content Include="assets\js\jquery-1.7.1.min.js" />
+    <Content Include="assets\js\jquery.accordion.js" />
+    <Content Include="assets\js\jquery.ba-cond.min.js" />
+    <Content Include="assets\js\jquery.cslider.js" />
+    <Content Include="assets\js\jquery.cslider_.js" />
+    <Content Include="assets\js\jquery.easing.js" />
+    <Content Include="assets\js\jquery.fitvids.min.js" />
+    <Content Include="assets\js\jquery.flexslider-min.js" />
+    <Content Include="assets\js\jquery.flexslider.js" />
+    <Content Include="assets\js\jquery.gmap.js" />
+    <Content Include="assets\js\jquery.isotope.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.mousewheel.js" />
+    <Content Include="assets\js\jquery.prettyPhoto.js" />
+    <Content Include="assets\js\jquery.refineslide.js" />
+    <Content Include="assets\js\jquery.refineslide.min.js" />
+    <Content Include="assets\js\jquery.slitslider.js" />
+    <Content Include="assets\js\jquery.transit.min.js" />
+    <Content Include="assets\js\jquery.ui.totop.js" />
+    <Content Include="assets\js\jquery.waitforimages.js" />
+    <Content Include="assets\js\modernizr.custom.28468.js" />
+    <Content Include="assets\js\modernizr.custom.79639.js" />
+    <Content Include="assets\js\respond.min.js" />
+    <Content Include="assets\js\slider.js" />
+    <Content Include="assets\js\superfish.js" />
+    <Content Include="assets\js\switcher.js" />
+    <Content Include="Global.asax" />
+    <Content Include="images\1_c.jpg" />
+    <Content Include="images\2_c.jpg" />
+    <Content Include="images\3_c.jpg" />
+    <Content Include="images\4_c.jpg" />
+    <Content Include="images\ava1.jpg" />
+    <Content Include="images\client_part\Cli_AguiaBranca.png" />
+    <Content Include="images\client_part\Cli_AndreMaggi.png" />
+    <Content Include="images\client_part\Cli_ArcelorMittal.png" />
+    <Content Include="images\client_part\Cli_CMPC.png" />
+    <Content Include="images\client_part\Cli_Fibria.png" />
+    <Content Include="images\client_part\Cli_Suzano.png" />
+    <Content Include="images\client_part\esri.jpg" />
+    <Content Include="images\client_part\logo_cargill.png" />
+    <Content Include="images\client_part\logo_cmpc.png" />
+    <Content Include="images\client_part\logo_suzano.gif" />
+    <Content Include="images\client_part\PMI.jpg" />
+    <Content Include="images\client_part\SGQ.jpg" />
+    <Content Include="images\down.png" />
+    <Content Include="images\FABRICA.jpg" />
+    <Content Include="images\FABRICA2.jpg" />
+    <Content Include="images\GIS.jpg" />
+    <Content Include="images\GIS2.jpg" />
+    <Content Include="images\GIS3.jpg" />
+    <Content Include="images\icons-freebie.png" />
+    <Content Include="images\ISG.gif" />
+    <Content Include="images\logo_client.png" />
+    <Content Include="images\onde_Estamos.png" />
+    <Content Include="images\pattern.png" />
+    <Content Include="images\showcase-slider.png" />
+    <Content Include="images\showcase-slider_code.png" />
+    <Content Include="images\showcase-slider_code2.png" />
+    <Content Include="images\SISPART.jpg" />
+    <Content Include="images\sispart.png" />
+    <Content Include="images\SISPART2.jpg" />
+    <Content Include="images\SISPART3.jpg" />
+    <Content Include="images\slider\1.jpg" />
+    <Content Include="images\slider\2.jpg" />
+    <Content Include="images\slider\3.jpg" />
+    <Content Include="images\slider\4.jpg" />
+    <Content Include="images\slider\5.jpg" />
+    <Content Include="images\slider\6.jpg" />
+    <Content Include="images\slider\7.jpg" />
+    <Content Include="images\SOFTWARE2.png" />
+    <Content Include="images\team_1.jpg" />
+    <Content Include="assets\pdf\siget.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\pdf\sist_alimentacao.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\pdf\sist_mensageria.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\t.pubxml" />
+    <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Noticias\Index.cshtml" />
+    <Content Include="Views\OndeEstamos\Index.cshtml" />
+    <Content Include="Views\Shared\products\gisagri\_PageProduct.cshtml" />
+    <Content Include="Views\Shared\products\gisagri\_MenuShared.cshtml" />
+    <Content Include="Views\Produtos\GISagri.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_PageLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_MenuShared.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_FooterShared.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Institucional\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Contato\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Solucoes\Sispart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Solucoes\Desenvolvimento.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Solucoes\Gis.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\slitslider\fonts\animals-webfont.eot" />
+    <Content Include="assets\css\slitslider\fonts\animals-webfont.ttf" />
+    <Content Include="assets\css\slitslider\fonts\animals-webfont.woff" />
+    <Content Include="assets\font\fontawesome-webfont.eot" />
+    <Content Include="assets\font\fontawesome-webfont.ttf" />
+    <Content Include="assets\font\fontawesome-webfont.woff" />
+    <Content Include="assets\font\FontAwesome.otf" />
+    <Content Include="assets\font\museo_slab_300-webfont.eot" />
+    <Content Include="assets\font\museo_slab_300-webfont.ttf" />
+    <Content Include="assets\font\museo_slab_500-webfont.eot" />
+    <Content Include="assets\font\museo_slab_500-webfont.ttf" />
+    <Content Include="assets\font\proximanova-sbold-webfont.eot" />
+    <Content Include="assets\font\proximanova-sbold-webfont.ttf" />
+    <Content Include="assets\font\proximanova-webfont.eot" />
+    <Content Include="assets\font\proximanova-webfont.ttf" />
+    <Content Include="assets\img\prettyPhoto\dark_rounded\Thumbs.db" />
+    <Content Include="assets\img\prettyPhoto\dark_square\Thumbs.db" />
+    <Content Include="assets\img\prettyPhoto\light_rounded\Thumbs.db" />
+    <Content Include="assets\img\prettyPhoto\light_square\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Cases\Siget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Cases\Sga.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Cases\Mensageria.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18717/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,88 @@
+﻿<!-- ################-->
+<!-- START TOP MENU -->
+<!-- ################-->
+<div class="nav-reaction">
+    <div class="navbar navbar-static-top">
+        <!-- navbar-fixed-top -->
+
+        <div class="navbar-inner">
+            <div class="container">
+                <div id="main-nav">
+                    <div class="nav-collapse collapse">
+                        <a class="brand" href="@Url.Action("Index","Home")">
+                            <img src="~/images/ISG.gif">
+                        </a>
+                        <ul class="nav">
+                            <li class="@(@ViewBag.Title == "Home" ? "active" : "")">
+                                <a href="@Url.Action("Index","Home")">Home</a>
+                            </li>
+
+                            <li class="@(@ViewBag.Title == "Institucional" ? "active" : "")">
+                                <a href="@Url.Action("Index","Institucional")">Institucional</a>
+                            </li>
+
+                            <li class="dropdown @(@ViewBag.Title == "SISPART" || @ViewBag.Title == "Desenvolvimento de Softwares" || @ViewBag.Title == "Sistema de Informação Geográfica" ? "active" : "")">
+                                <a class="dropdown-toggle"
+                                    data-toggle="dropdown" href="javascript:">Soluções <b class="caret"></b></a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="@Url.Action("Sispart","Solucoes")">SISPART</a>
+                                    </li>
+
+                                    @*<li>
+                                        <a href="@Url.Action("GisAgri","Produtos")">GISagri</a>
+                                    </li>*@
+
+                                    <li>
+                                        <a href="@Url.Action("Desenvolvimento","Solucoes")">Desenvolvimento
+                                                    de Software</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@Url.Action("Gis","Solucoes")">Sistema de
+                                                    Informações Geográficas</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown @(@ViewBag.Title == "Siget" || @ViewBag.Title == "Sistema de Gestão de Alimentação" || @ViewBag.Title == "Sistema de Mensageria" ? "active" : "")">
+                                <a class="dropdown-toggle"
+                                    data-toggle="dropdown" href="javascript:">Cases <b class="caret"></b></a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="@Url.Action("Siget","Cases")">Siget</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@Url.Action("Sga","Cases")">Sistema de Gestão de Alimentação</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@Url.Action("Mensageria","Cases")">Sistema de Mensageria</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            @*<li class="@(@ViewBag.Title == "Notícias" ? "active" : "")">
+                                <a href="@Url.Action("Index","Noticias")">Notícias</a>
+                            </li>*@
+
+                            <li class="@(@ViewBag.Title == "Onde Estamos" ? "active" : "")">
+                                <a href="@Url.Action("Index","OndeEstamos")">Onde Estamos</a>
+                            </li>
+
+                            <li class="@(@ViewBag.Title == "Contato" ? "active" : "")">
+                                <a href="@Url.Action("Index","Contato")">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ################-->
+<!-- END TOP MENU -->
+<!-- ################-->

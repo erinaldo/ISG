@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Contato";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+}
+
+<div class="container">
+    <!-- CONTENT CONTAINER -->
+
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="color-bottom-line">
+                    <h3 class="standart-h3title"><i class="fa-icon-pushpin main-color"></i> Nossos
+                            Escritórios</h3>
+                </div>
+
+                <div class="">
+                    <div class="well">
+                        <address>
+                            <strong>Vitória</strong><br>
+                            <i class="fa-icon-map-marker"></i> R.
+                                    Eurico de Aguiar, 888, sala 1004<br>
+                            Vitória, ES 29055-280<br>
+                            <i class="fa-icon-phone-sign"></i> + 55
+                                    (27) 2122-0880
+
+                            <div class="foot-line"></div>
+                        </address>
+                    </div>
+
+                    <h3 class="standart-h3title"><i class="fa-icon-share main-color"></i> Entre em
+                            contato</h3>
+
+                    <div class="well">
+                        <div class="widget_nav_menu">
+                            <ul class="socialIcons">
+                                <li class="facebook">
+                                    <a href="https://www.facebook.com/InflorConsultoriaESistemas" target="_blank">facebook</a>
+                                </li>
+
+                                <li class="email">
+                                    <a href="#">email</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span8">
+                <h3 class="standart-h3title"><i class="fa-icon-envelope-alt main-color"></i> Contato</h3>
+                <!-- CONTACT FORM -->
+
+                @using (Ajax.BeginForm("Enviar", null, new AjaxOptions { UpdateTargetId = "msgResponseContato", OnSuccess = "onSuccess", OnBegin = "onBegin", OnComplete = "onComplete" }, new { @id = "ajax-contacts", @name="ajax-contacts" }))
+                {
+                    <div id="msgResponseContato" style="background-color:rgba(128, 128, 128, 0.8);height:30px;width:100%;display:none;text-align:center"></div>
+                    <label>Name</label><input class="span8" name="name"
+                        type="text" value=""><br>
+                    <label>E-Mail</label><input class="span8" name="email"
+                        type="text" value=""><br>
+                    <label>Assunto</label><input class="span8" name="subject"
+                        type="text" value=""><br>
+                    <label>Menssagem</label>
+                    <textarea class="span8" cols="25" name="message"
+                        rows="5"></textarea><br>
+                    <label>&nbsp;</label><input class="btn btn-large btn-info"
+                        name="submit" type="submit"
+                        value="Enviar">
+                }
+                <!-- END CONTACT FORM -->
+            </div>
+
+            <div class="span12">
+                <div class="color-bottom-line center">
+                    <h2 class="line center"><span><i class="fa-icon-map-marker main-color"></i> Nossa
+                            localização</span></h2>
+                </div>
+                <!-- MAP DIV // !Don't remove this !Important -->
+                <!-- MAP DIV // !Don't remove this !Important -->
+
+                <div id="map"></div>
+                <!-- MAP DIV // !Don't remove this !Important -->
+                <hr class="half">
+            </div>
+            <!-- MAP DIV // !Don't remove this !Important -->
+        </div>
+    </div>
+</div>
+<!-- END CONTENT CONTAINER -->
