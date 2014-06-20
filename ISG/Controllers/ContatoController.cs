@@ -29,7 +29,7 @@ namespace ISG.Controllers
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
                 client.Host = "mail.inflor.com.br";
-                NetworkCredential credentials = new NetworkCredential("sistemas@inflor.local", "sysinflor");
+                NetworkCredential credentials = new NetworkCredential("*****", "*****");
                 client.Credentials = credentials;
                 mail.Subject = "Email do Site ISG";
                 mail.Body = "Nome: \r\n" + name + "\r\n\r\nAssunto: \r\n" + subject + "\r\n\r\nMenssagem: \r\n" + message + "\r\n" + "\r\n\r\nContato: \r\n" + email;
